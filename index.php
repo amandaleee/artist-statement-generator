@@ -35,13 +35,13 @@ if (isset($_POST['submit'])) {
     $length = $_REQUEST['length'];
     $ptext  = $_REQUEST['text'];
 
-    if ($ptext) $text = file_get_contents("text/".$ptext.".txt");
+    $text = file_get_contents("text/statements.txt");
 
     if(isset($text)) {
         $markov_table = generate_markov_table($text, $order);
         $markov = generate_markov_text($length, $markov_table, $order);
 
-        if (get_magic_quotes_gpc()) $markov = stripslashes($markov);
+        //if (get_magic_quotes_gpc()) $markov = stripslashes($markov);
     }
 }
 ?>
