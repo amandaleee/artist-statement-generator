@@ -50,7 +50,8 @@ if (isset($_POST['submit'])) {
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>Artist Statement Generator</title>
-    <link rel="stylesheet" type="text/css" href="" />    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />    
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
     <h1>Artist Statement Generator</h1>
