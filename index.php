@@ -33,10 +33,8 @@ if (isset($_POST['submit'])) {
     // generate text with markov library
     $order  = $_REQUEST['order'];
     $length = $_REQUEST['length'];
-    $input  = $_REQUEST['input'];
     $ptext  = $_REQUEST['text'];
 
-    if ($input) $text = $input;
     if ($ptext) $text = file_get_contents("text/".$ptext.".txt");
 
     if(isset($text)) {
@@ -56,18 +54,13 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <h1>Artist Statement Generator</h1>
-    
-    <p>.</p>
-
-    
-
     <h2>Input text</h2>
     <form method="post" action="" name="markov">
         <select name="text">
-            <option value="alice" selected>Alice's Adventures in Wonderland, by Lewis Carroll</option>
+            <option value="statements" selected>Artist statements</option>
         </select>
         <label for="order">Order</label>
-        <input type="text" name="order" placeholder="4" value="4" />
+        <input type="text" name="order" required />
         <label for="length">Length</label>
         <input type="text" name="length" value="2500" />
         <br />
@@ -79,6 +72,6 @@ if (isset($_POST['submit'])) {
         <textarea rows="20" cols="80" readonly="readonly"><?php echo $markov; ?></textarea>
     <?php endif; ?>
 
-    <p>Special thanks to <a href="http://www.haykranen.nl">Hay Kranen</a> for making the Markov chain code available for public use unse the MIT license. The source code is <a href="http://www.haykranen.nl/projects/markov">here</a>;  the license is <a href="http://www.opensource.org/licenses/mit-license.php">here</a>.</p>    
+    <p>Special thanks to <a href="http://www.haykranen.nl">Hay Kranen</a> for making the Markov chain code available for public reuse. The source code is <a href="http://www.haykranen.nl/projects/markov">here</a>;  the license is <a href="http://www.opensource.org/licenses/mit-license.php">here</a>.</p>    
 </body>
 </html>
