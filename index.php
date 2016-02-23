@@ -57,16 +57,18 @@ if (isset($_POST['submit'])) {
 <body>
     <h1>Artist Statement Generator</h1>
     
+    <p>.</p>
+
+    
 
     <h2>Input text</h2>
     <form method="post" action="" name="markov">
         <select name="text">
-            <option value="">select</option>
-            <option value="alice">Alice's Adventures in Wonderland, by Lewis Carroll</option>
+            <option value="alice" selected>Alice's Adventures in Wonderland, by Lewis Carroll</option>
         </select>
         <label for="order">Order</label>
-        <input type="text" name="order" placeholder="4" />
-        <label for="length">Length of your statement [in characters]</label>
+        <input type="text" name="order" placeholder="4" value="4" />
+        <label for="length">Length</label>
         <input type="text" name="length" value="2500" />
         <br />
         <input type="submit" name="submit" value="GO" />
