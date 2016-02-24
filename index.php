@@ -52,6 +52,7 @@ if (isset($_POST['submit'])) {
     <title>Artist Statement Generator</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />    
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
     <h1>Artist Statement Generator</h1>
@@ -76,3 +77,9 @@ if (isset($_POST['submit'])) {
     <p>Special thanks to <a href="http://www.haykranen.nl">Hay Kranen</a> for making the Markov chain code available for public reuse. The source code is <a href="http://www.haykranen.nl/projects/markov">here</a>;  the license is <a href="http://www.opensource.org/licenses/mit-license.php">here</a>.</p>    
 </body>
 </html>
+
+<!-- TODO 
+- fonts
+- background img thing
+
+-->
