@@ -55,24 +55,23 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
-    <h1>Artist Statement Generator</h1>
-    <h2>Input text</h2>
-    <form method="post" action="" name="markov">
-        <select name="text">
-            <option value="statements" selected>Artist statements</option>
-        </select>
-        <label for="order">Order</label>
-        <input type="text" name="order" required />
-        <label for="length">Length</label>
-        <input type="text" name="length" value="2500" />
-        <br />
-        <input type="submit" name="submit" value="GO" />
-    </form>
+    <div class="container">
+            <h1>Artist Statement Generator</h1>
+            <h2>Input text</h2>
+            <form method="post" action="" name="markov">
+                <label for="order">Order</label>
+                <input type="text" name="order" required />
+                <label for="length">Length</label>
+                <input type="text" name="length" value="2500" />
+                <br />
+                <input type="submit" name="submit" value="GO" />
+            </form>
 
-    <?php if (isset($markov)) : ?>
-        <h2>Output text</h2>
-        <textarea rows="20" cols="80" readonly="readonly"><?php echo $markov; ?></textarea>
-    <?php endif; ?>
+            <?php if (isset($markov)) : ?>
+                <h2>Output text</h2>
+                <textarea rows="20" cols="80" readonly="readonly"><?php echo $markov; ?></textarea>
+            <?php endif; ?>
+    </div><!--/container-->
 
     <p>Special thanks to <a href="http://www.haykranen.nl">Hay Kranen</a> for making the Markov chain code available for public reuse. The source code is <a href="http://www.haykranen.nl/projects/markov">here</a>;  the license is <a href="http://www.opensource.org/licenses/mit-license.php">here</a>.</p>    
 </body>
@@ -81,5 +80,5 @@ if (isset($_POST['submit'])) {
 <!-- TODO 
 - fonts
 - background img thing
-
+- validation
 -->

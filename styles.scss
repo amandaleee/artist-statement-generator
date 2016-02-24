@@ -1,0 +1,37 @@
+@import "bootstrap";
+
+//vars
+$fonts: Georgia, serif;
+
+//colors
+$primary-color: #8151b3; //purple
+$secondary-color: #798693; //light grey
+$tertiary-color: #0b0f0d; //black
+$quaternary-color: #11154c; //navy
+$quinary-color: #4c5056; //dark grey
+$white: #fff; //obvs
+
+//mixins
+@mixin center($max-width) {
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+//actual styles
+html, body {
+	background-color: $secondary-color;
+	color: $white;
+}
+input, textarea {
+	color: $tertiary-color;
+}
+a, a:active, a:visited, a:hover {
+	color: $white;
+	text-decoration: underline;
+}
+
+h1 {
+	@extend .row;
+	text-align: center;
+}
